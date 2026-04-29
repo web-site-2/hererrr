@@ -1,0 +1,117 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ذكرياتنا</title>
+
+  <!-- Cairo Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated hearts container -->
+  <div id="hearts-container" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="screen active" id="screen-1">
+      <div class="glass-card">
+        <h1>مرحبًا يا حبيبتي 💖</h1>
+        <p>ادخلي كلمة السر لفتح عالم ذكرياتنا</p>
+
+        <form id="login-form" autocomplete="off">
+          <input
+            type="password"
+            id="password-input"
+            placeholder="كلمة السر"
+            aria-label="كلمة السر"
+            required
+          />
+          <button type="submit" class="btn">دخول</button>
+        </form>
+
+        <p id="error-message" class="error-message"></p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-2">
+      <div class="glass-card">
+        <h2>المفتاح السحري 🌹</h2>
+        <p>اضغطي على الوردة لتبدأ الرحلة</p>
+        <button id="rose-btn" class="rose-btn" aria-label="وردة">🌹</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-3">
+      <div class="glass-card">
+        <h2>رسالة من القلب</h2>
+        <p class="romantic-text">
+          منذ أول لحظة، صار للحياة لون مختلف... لون يشبه دفء قلبك وابتسامتك.
+        </p>
+        <button class="btn next-btn" data-next="4">التالي</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-4">
+      <div class="glass-card">
+        <h2>وعد حب</h2>
+        <p class="romantic-text">
+          كل ذكرى بيننا هي نجمة، ومعًا صنعنا سماءً كاملة لا تنطفئ أبدًا.
+        </p>
+        <button class="btn next-btn" data-next="5">التالي</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-5">
+      <div class="glass-card dashboard">
+        <h2>ذكرياتنا الجميلة ✨</h2>
+
+        <div class="audio-block">
+          <h3>أغنيتنا</h3>
+          <!-- ضع اسم ملف الصوت الخاص بك داخل src مثل: assets/our-song.mp3 -->
+          <audio id="love-audio" controls loop>
+            <source src="assets/your-romantic-song.mp3" type="audio/mpeg" />
+            متصفحك لا يدعم تشغيل الصوت.
+          </audio>
+        </div>
+
+        <div class="carousel-block">
+          <h3>ألبوم الصور</h3>
+          <div class="carousel">
+            <button class="carousel-btn prev" id="prev-slide" aria-label="السابق">❮</button>
+            <img id="carousel-image" src="" alt="ذكرى جميلة" />
+            <button class="carousel-btn next" id="next-slide" aria-label="التالي">❯</button>
+          </div>
+          <p class="hint">استخدمي الأسهم للتنقل بين الصور</p>
+        </div>
+
+        <div class="timer-block">
+          <h3>منذ بداية حبنا</h3>
+          <p id="relationship-timer">0 يوم 0 ساعة 0 دقيقة 0 ثانية</p>
+        </div>
+
+        <button class="btn next-btn" data-next="6">الختام</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-6">
+      <div class="glass-card">
+        <h2>إلى الأبد معك ❤️</h2>
+        <p class="romantic-text">
+          شكرًا لأنك أجمل صدفة وأحنّ وطن... أحبك أكثر كل يوم.
+        </p>
+        <button id="replay-btn" class="btn">إعادة الرحلة</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
